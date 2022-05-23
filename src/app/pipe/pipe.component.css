@@ -12,8 +12,9 @@
     
 }
 .form-controler{
-    padding: 1% .5%;
+    padding: .5% .5%;
     margin: 0% 1%;
+    border-radius: 10px;
 }
 .btn{
     padding: 1%;

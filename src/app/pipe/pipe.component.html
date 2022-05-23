@@ -7,12 +7,13 @@
 <!-- <p>Angular says {{prom |async}}</p> -->
 
 <!-- <p>{{text |summary:6}}</p> -->
-<input type="text" class="search" placeholder="Search .." [(ngModel)]="searchstring">
 <div class="flex">
     <input type="text" #name class="form-controler" placeholder="Enter Name"/>
     <input type="number" #age class="form-controler" placeholder="Enter Age..."/>
     <input (click)="addTrainee({name:name.value,age:age.valueAsNumber})" type="submit" class="btn" value="Submit">
 </div>
+<input type="text" class="search" placeholder="Search .." [(ngModel)]="searchstring">
+
 <div class="header">
     <p> Trainee Name</p>
     <p> Trainee Age</p>
