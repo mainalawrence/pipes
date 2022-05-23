@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+interface student{
+  name:string,
+  age:number
+}
 @Component({
   selector: 'app-pipe',
   templateUrl: './pipe.component.html',
@@ -60,10 +64,11 @@ public trainees:{name:string,age:number}[]=[
 ]
 
 constructor() { }
-addTrainee(){
-  this.trainees.push({
-    name:'John Doe',
-    age:100
-  })
+addTrainee(data:student){
+let result=this.trainees.find(({name,age})=>name==data.name);
+if(result===undefined){
+  this.trainees.push(data); 
 }
+}
+
 }

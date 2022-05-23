@@ -5,14 +5,19 @@
 <p>{{me.covered | percent}}</p> -->
 
 <!-- <p>Angular says {{prom |async}}</p> -->
-<button (click)="addTrainee()">Add Student</button>
+
 <!-- <p>{{text |summary:6}}</p> -->
 <input type="text" class="search" placeholder="Search .." [(ngModel)]="searchstring">
+<div class="flex">
+    <input type="text" #name class="form-controler" placeholder="Enter Name"/>
+    <input type="number" #age class="form-controler" placeholder="Enter Age..."/>
+    <input (click)="addTrainee({name:name.value,age:age.valueAsNumber})" type="submit" class="btn" value="Submit">
+</div>
 <div class="header">
     <p> Trainee Name</p>
     <p> Trainee Age</p>
 </div>
-<div class ='content' *ngFor="let trainee of trainees | search:searchstring  | sort">
+<div class ='content' *ngFor="let trainee of trainees | search:searchstring  | sort ">
     <p>{{trainee.name}}</p>
     <p> {{trainee.age}}</p>
 </div>
