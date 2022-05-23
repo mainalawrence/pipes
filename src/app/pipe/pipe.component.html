@@ -12,7 +12,7 @@
     <p> Trainee Name</p>
     <p> Trainee Age</p>
 </div>
-<div class ='content' *ngFor="let trainee of trainees | search:searchstring">
+<div class ='content' *ngFor="let trainee of trainees | search:searchstring  | sort">
     <p>{{trainee.name}}</p>
     <p> {{trainee.age}}</p>
 </div>
